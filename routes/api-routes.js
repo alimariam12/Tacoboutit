@@ -57,4 +57,15 @@ module.exports = function(app) {
         res.json(dbReview);
       });
   });
+
+  app.get("/api/posts/category/:category", function(req, res) {
+    db.Review.findAll({
+      where: {
+        category: req.params.category
+      }
+    })
+      .then(function(dbReview) {
+        res.json(dbReview);
+      });
+  });
 };
