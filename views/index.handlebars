@@ -38,9 +38,9 @@
   <div class="column is-half" <h2 class="is-size-5">Burgers I Want</h2> <br>
 
     <ul>
-      {{#each borgors}}
-      {{#unless devoured}}
-      {{> borgors/burgerstoeat}}
+      {{#each tablename}}
+      {{#unless category}}
+      {{> tablename/partialsfile}}
       {{/unless}}
       {{/each}}
     </ul>
@@ -49,9 +49,9 @@
     <h2 class="is-size-5">Burgers I Have Eaten</h2><br>
 
     <ul>
-      {{#each borgors}}
-      {{#if devoured}}
-      {{> borgors/burgerseaten}}
+      {{#each tablename}}
+      {{#if category}}
+      {{> tablename/partialsfile}}
       {{/if}}
       {{/each}}
     </ul>

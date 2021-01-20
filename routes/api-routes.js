@@ -50,4 +50,11 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/posts/", function(req, res) {
+    db.Review.findAll({})
+      .then(function(dbReview) {
+        res.json(dbReview);
+      });
+  });
 };
