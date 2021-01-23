@@ -7,6 +7,7 @@ module.exports = function(app) {
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    console.log("HIT THE LOGIN ENDPOINT, BOSS");
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
@@ -22,8 +23,9 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password
     })
-      .then(() => {
-        res.redirect(307, "/api/login");
+      .then((data) => {
+        // res.redirect(307, "/api/login");
+        res.json(data);
       })
       .catch(err => {
         res.status(401).json(err);

@@ -8,8 +8,9 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
+    console.log("ASDF FDSA", req.user, req.User);
     if (req.user) {
-      res.render("/members");
+      res.redirect("/members");
     }
     res.render("login");
   });
