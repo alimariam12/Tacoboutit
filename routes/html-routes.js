@@ -9,25 +9,25 @@ module.exports = function (app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/login");
+      res.render("/members");
     }
     res.render("login");
   });
 
-  app.get("/login", (req, res) => {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.render("/");
-    } else {
-      res.redirect("/signup");
-    }
-    res.render("/");
-  });
+  // app.get("/login", (req, res) => {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.render("/members");
+  //   } else {
+  //     res.redirect("/signup");
+  //   }
+  //   res.render("login");
+  // });
 
   app.get("/signup", (req, res) => {
     res.render("signup");
   });
-  app.get("/review", (req, res) => {
+  app.get("/review", isAuthenticated, (req, res) => {
     res.render("review");
   });
   app.get("/members", isAuthenticated, (req, res) => {
