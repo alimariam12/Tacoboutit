@@ -5,7 +5,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Butterfly Kids", cursive !important;
   font-weight: bold !important;
   font-size: 30px !important;
 }
@@ -25,7 +24,6 @@ body {
 
 #onlyNavbar {
   background-color: "transparent";
-  font-family: "Butterfly Kids", cursive;
   font-size: 10px;
   font-weight: 900;
 }
@@ -63,12 +61,12 @@ input:focus {
 }
 
 .login_btn {
-  color: black;
-  background-color: #ffc312;
+  color: white !important;
+  background-color: #070707 !important;
   width: 100px;
 }
 
 .login_btn:hover {
-  color: black;
-  background-color: white;
+  color: black !important;
+  background-color: white !important; 
 }
