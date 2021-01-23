@@ -23,12 +23,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
-app.get('/', (req, res) => {
-  res.render('login');
-});
+// app.get('/', (req, res) => {
+//   res.render('signup');
+// });
 // Express-Handlebars
 app.set("view engine", "handlebars");
 app.engine("handlebars", expshb({defaultLayout: "main"}));
