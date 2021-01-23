@@ -32,20 +32,25 @@ body {
   height: 100%;
   align-content: center;
 }
+#signupCard {
+  height: 500px;
+}
+
 
 .card, #signupCard {
-  height: 370px;
+  height: 400px;
   margin-top: 50px;
   margin-bottom:auto;
   width: 400px;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.65) !important;
   /* transition: width 2s, height 2s, transform 2s; */
   padding-top: 20px;
   color: white;
+  border-radius: 25px;
 }
 .card:hover, #signupCard:hover {
   width: 400px;
-  height: 370px;
+  height: 400px;
 }
 
 .input-group-prepend span {

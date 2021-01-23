@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "lunaluna",
+      "password": "weekend",
       "database": "restaurants_db",
       "host": "localhost",
       "port": 3306,
