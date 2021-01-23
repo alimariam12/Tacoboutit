@@ -14,9 +14,7 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.use(express.static("public"));``
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -25,8 +23,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
-// require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+//require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+app.get('/', (req, res) => {
+  res.render('index');
+});
 
 // Express-Handlebars
 app.set("view engine", "handlebars");
