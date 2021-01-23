@@ -6,36 +6,39 @@ const db = require("../models");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
-//   app.get("/", (req, res) => {
-//     // If the user already has an account send them to the members page
-//     if (req.user) {
-//       res.redirect("/login");
-//     }
-//     res.sendFile(path.join(__dirname, "../public/login.handlebars"));
-//   });
+  app.get("/", (req, res) => {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/login");
+    }
+    res.render("login");
+  });
 
-//   app.get("/login", (req, res) => {
-//     // If the user already has an account send them to the members page
-//     if (req.user) {
-//       res.redirect("/");
-//     // } else {
-//     //     res.render
-//     // }
-//     res.sendFile(path.join(__dirname, "/"));
-//   };
-// });
-// app.get("/signup", (req, res) => {
-//     res.render("signup")
-// });
-// app.get("/review", (req, res) => {
-//     res.render("review")
-// });
+  app.get("/login", (req, res) => {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render("/");
+    } else {
+        res.redirect("/signup")
+    }
+    res.render("/")
+  });
 
+app.get("/signup", (req, res) => {
+    res.render("signup")
+});
+app.get("/review", (req, res) => {
+    res.render("review")
+});
+app.get("/members", isAuthenticated, (req, res) => {
+  res.render("review")
+})
 
+};
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
 //   app.get("/", function(req, res) {
 //     res.sendFile(path.join(__dirname, ""));
 //   });
-}
+
