@@ -5,7 +5,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Butterfly Kids", cursive !important;
   font-weight: bold !important;
   font-size: 30px !important;
 }
@@ -25,7 +24,6 @@ body {
 
 #onlyNavbar {
   background-color: "transparent";
-  font-family: "Butterfly Kids", cursive;
   font-size: 10px;
   font-weight: 900;
 }
