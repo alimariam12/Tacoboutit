@@ -1,15 +1,78 @@
 body {
-    background-image: url(/images/backgroundimage.jpg) ;
-    padding-bottom: 30px;
+  background: url("https://image.freepik.com/free-photo/basil-leaves-chia-seeds-halved-tomato-oil-arranged-white-wooden-floor_23-2148026880.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Butterfly Kids", cursive !important;
+  font-weight: bold !important;
+  font-size: 30px !important;
 }
 #signupCard {
-    
-    border-radius: 25px;
-    background: url(paper.gif);
-      
+  width: 400px;
+  height: 370px;
+  background-color: rgb(192, 154, 154, 0.3);
+  transition: width 2s, height 2s, transform 2s;
+  padding: 10px;
+  font-family: "Butterfly Kids", cursive;
+  
 }
 
-.title {
-    font-family: sans-serif;
-    text-shadow: 0 0 2px black;
-  }
+#signupCard:hover {
+  width: 350px;
+  height: 350px;
+  transform: rotate(360deg);
+}
+
+#onlyNavbar {
+  background-color: "transparent";
+  font-family: "Butterfly Kids", cursive;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+.card {
+  height: 370px;
+  margin-top: 50px;
+  margin-bottom:auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  transition: width 2s, height 2s, transform 2s;
+  padding-top: 20px;
+}
+.card:hover {
+  width: 350px;
+  height: 350px;
+  transform: rotate(360deg);
+}
+
+
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.login_btn {
+  color: black;
+  background-color: #ffc312;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}

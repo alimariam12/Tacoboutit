@@ -1,15 +1,17 @@
 {{!-- Login page  --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="css/style.css">
 
 <div class="content has-text-centered wow fadeInUp" data-wow-duration="0.75s" data-wow-delay=".5s">
-      <h1 class="title">Let's Taco 'Bout It!</h1>
-      <h2 class="subtitle is-3">Log in to review some of your favorite restuarts!</h2>
+      {{!-- <h1 class="title">Let's Taco 'Bout It!</h1>
+      <h2 class="subtitle is-3">Log in to review some of your favorite restuarts!</h2> --}}
+	
 	  
-    </div>
+</div>
 
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
-		<div class="card">
+		<div class="card" id="loginCard">
 			<div class="card-header">
 				<h3>Sign In</h3>
 			</div>
@@ -22,12 +24,14 @@
 						<input type="text" class="form-control" placeholder="username">
 						
 					</div>
+					<br>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
 						<input type="password" class="form-control" placeholder="password">
 					</div>
+					<br>
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
 					</div>
