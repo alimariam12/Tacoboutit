@@ -27,8 +27,9 @@ $(document).ready(() => {
         email: email,
         password: password,
       })
-        .then(() => {
+        .then((newUser) => {
           window.location.replace("/members");
+          console.log(newUser);
           // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);
