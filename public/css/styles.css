@@ -8,19 +8,19 @@ body {
   font-weight: bold !important;
   font-size: 30px !important;
 }
-#signupCard {
+/* #signupCard {
   width: 400px;
   height: 370px;
   background-color: rgba(10, 10, 10, 0.3);
   padding: 10px;
   
-}
+} */
 
-#signupCard:hover {
+/* #signupCard:hover {
   width: 350px;
   height: 350px;
   transform: rotate(360deg);
-}
+} */
 
 #onlyNavbar {
   background-color: "transparent";
@@ -33,7 +33,7 @@ body {
   align-content: center;
 }
 
-.card {
+.card, #signupCard {
   height: 370px;
   margin-top: 50px;
   margin-bottom:auto;
@@ -43,7 +43,7 @@ body {
   padding-top: 20px;
   color: white;
 }
-.card:hover {
+.card:hover, #signupCard:hover {
   width: 400px;
   height: 370px;
 }
