@@ -1,0 +1,154 @@
+body {
+  background: url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-weight: bold !important;
+  font-size: 30px !important;
+  font-family: 'Bodoni Moda', serif !important;
+}
+
+.nav-link {
+  margin-left: 10em;
+}
+
+#navBar {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.containerIndex {
+  height: 100%;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  border-radius: 25px;
+  margin-top: 50px !important;
+}
+
+#signupCard {
+  height: 500px;
+}
+
+.card,
+#signupCard {
+  height: 400px;
+  margin-top: 50px;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  /* transition: width 2s, height 2s, transform 2s; */
+  padding-top: 20px;
+  color: white;
+  border-radius: 25px;
+}
+.card:hover,
+#signupCard:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.login_btn {
+  color: white !important;
+  background-color: #070707 !important;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+#indexCard {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  border-radius: 25px;
+}
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.reviewText{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.top {
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.form-bg {
+  background: rgba(68, 68, 65, 0.77);
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.form {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.form-control {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #61615e !important;
+  background: transparent;
+}
+
+button.btn {
+  display: block;
+  padding: 11px 32px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: 30px 0px;
+}
+
+.btn-blue {
+  background-color: #4285f4 !important;
+  color: #fff;
+  border: 1px solid #4285f4 !important;
+}
