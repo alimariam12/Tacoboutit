@@ -1,5 +1,5 @@
 {
-  "name": "Project_2_bby",
+  "name": "project_2_bby",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -34,6 +34,8 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sequelize": "^6.3.5"
-  }
+    "sequelize": "^6.3.5",
+    "yelp-fusion": "^3.0.0"
+  },
+  "devDependencies": {}
 }
