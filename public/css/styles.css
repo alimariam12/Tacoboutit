@@ -7,7 +7,11 @@ body {
   background-size: cover;
   font-weight: bold !important;
   font-size: 30px !important;
-  font-family: 'Hachi Maru Pop', cursive !important;
+  font-family: 'Bodoni Moda', serif !important;
+}
+
+.nav-link {
+  margin-left: 10em;
 }
 
 #navBar {
