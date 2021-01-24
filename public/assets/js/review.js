@@ -1,22 +1,22 @@
-var $stars;
+let $stars;
 
 jQuery(document).ready(function ($) {
   // Custom whitelist to allow for using HTML tags in popover content
-  var myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList;
+  let myDefaultWhiteList = $.fn.tooltip.Constructor.Default.whiteList;
   myDefaultWhiteList.textarea = [];
   myDefaultWhiteList.button = [];
 
   $stars = $(".rate-popover");
 
   $stars.on("mouseover", function () {
-    var index = $(this).attr("data-index");
+    let index = $(this).attr("data-index");
     markStarsAsActive(index);
   });
 
   function markStarsAsActive(index) {
     unmarkActive();
 
-    for (var i = 0; i <= index; i++) {
+    for (let i = 0; i <= index; i++) {
       $($stars.get(i)).removeClass("fa-meh-blank");
       $($stars.get(i)).addClass("live");
       switch (index) {
