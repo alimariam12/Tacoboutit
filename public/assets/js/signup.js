@@ -40,3 +40,4 @@ $(document).ready(() => {
     passwordInput.val("");
   });
 });
+console.log($.post);
