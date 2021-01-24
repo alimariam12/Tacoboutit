@@ -5,8 +5,8 @@
 				<h3>Sign Up</h3>
 			</div>
 			<div class="card-body">
-				<form>
-					<div class="input-group form-group">
+				<form class="signup">
+					{{!-- <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
@@ -21,12 +21,12 @@
 						<input type="text" class="form-control" placeholder="Last Name">
 						
 					</div>
-					<br>
+					<br> --}}
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input type="text" class="form-control" placeholder="username" id="email-input">
 						
 					</div>
 					<br>
@@ -34,7 +34,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input type="password" class="form-control" placeholder="password" id="password-input">
 					</div>
 					<br>
 					<div class="form-group">
@@ -47,6 +47,5 @@
 		</div>
 	</div>
 </div>  
-  
 
-
+<script src="/assets/js/signup.js"></script>
