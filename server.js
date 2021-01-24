@@ -27,7 +27,7 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // app.get('/', (req, res) => {
-//   res.render('signup');
+//   res.render('index');
 // });
 // Express-Handlebars
 app.set("view engine", "handlebars");

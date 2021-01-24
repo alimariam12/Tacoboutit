@@ -22,25 +22,35 @@ body {
   transform: rotate(360deg);
 } */
 
-#onlyNavbar {
-  background-color: "transparent";
-  font-size: 10px;
-  font-weight: 900;
+#navBar {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.navbar-brand, .nav-link {
+  color: white !important;
 }
 
-.container {
+.containerIndex {
   height: 100%;
   align-content: center;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  border-radius: 25px;
+  margin-top: 50px !important;
+
 }
+
 #signupCard {
   height: 500px;
 }
 
-
-.card, #signupCard {
+.card,
+#signupCard {
   height: 400px;
   margin-top: 50px;
-  margin-bottom:auto;
+  margin-bottom: auto;
   width: 400px;
   background-color: rgba(0, 0, 0, 0.65) !important;
   /* transition: width 2s, height 2s, transform 2s; */
@@ -48,7 +58,8 @@ body {
   color: white;
   border-radius: 25px;
 }
-.card:hover, #signupCard:hover {
+.card:hover,
+#signupCard:hover {
   width: 400px;
   height: 400px;
 }
@@ -73,5 +84,81 @@ input:focus {
 
 .login_btn:hover {
   color: black !important;
-  background-color: white !important; 
+  background-color: white !important;
 }
+
+#indexCard {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  border-radius: 25px;
+
+}
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+/* card index cards */
+/* .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    /* flex-direction: column;
+  } */ 
