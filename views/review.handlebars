@@ -37,8 +37,19 @@
         <div class="form-bg">
           <form class="form">
             <div class="card-body">
-              <h3 class="card-title reviewText">Title</h3>
-              <p class="card-text bodyText">wow would you look at that woo</p>
+              {{!-- <h3 class="card-title reviewText">Title</h3> --}}
+              <ul class="reviewTitle">
+                {{#each title}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+
+              {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
+              <ul class="bodyText">
+                {{#each body}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
             </div>
           </form>
         </div>
