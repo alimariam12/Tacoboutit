@@ -20,7 +20,7 @@ const bodyInput = $("textarea#messageNine");
         console.log("created new review bby");
         // Reload the page to get the updated list
         location.reload();
-      }
+      }`
     );
     // $.ajax("/api/review", {
     //   type: "GET",
