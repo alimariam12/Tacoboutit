@@ -16,7 +16,7 @@ const bodyInput = $("textarea#messageNine");
       type: "POST",
       data: newReview
     }).then(
-      function() {
+      function(data) {
         console.log("created new review bby");
         // Reload the page to get the updated list
         location.reload();
