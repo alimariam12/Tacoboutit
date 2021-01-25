@@ -22,4 +22,16 @@ const bodyInput = $("textarea#messageNine");
         location.reload();
       }
     );
+    // $.ajax("/api/review", {
+    //   type: "GET",
+    //   data: newReview
+    // }).then(
+    //   function() {
+    //     console.log("created new review bby");
+    //     // Reload the page to get the updated list
+    //     location.reload();
+    //   }
+    // );
+
+
   });
