@@ -8,6 +8,7 @@ body {
   font-weight: bold !important;
   font-size: 30px !important;
   font-family: 'Bodoni Moda', serif !important;
+  /* font-family: "Lato", sans-serif; */
 }
 
 .nav-link {
@@ -137,7 +138,7 @@ input:focus {
   background: transparent;
 }
 
-button.btn {
+ button.btn {
   display: block;
   padding: 11px 32px;
   -webkit-transition: all 0.3s ease 0s;
@@ -151,4 +152,21 @@ button.btn {
   background-color: #4285f4 !important;
   color: #fff;
   border: 1px solid #4285f4 !important;
+} 
+
+.reviewCard {
+  height: 120px;
+  margin-bottom: auto;
+  margin-top: auto;
+  width: 900px;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  /* transition: width 2s, height 2s, transform 2s; */
+  color: white;
+  border-radius: 25px;
+}
+.search-input {
+  height: 30px !important;
+  width: 500px !important;
+  font-size: large;
+
 }
