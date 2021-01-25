@@ -54,21 +54,16 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/posts/", function(req, res) {
-    db.Review.findAll({})
-      .then(function(dbReview) {
-        res.json(dbReview);
-      });
-  });
-
-  app.get("/api/posts/category/:category", function(req, res) {
-    db.Review.findAll({
-      where: {
-        category: req.params.category
-      }
+  app.post("/api/review", function(req, res) {
+    console.log(req.body);
+    db.Review.create({
+      title: req.body.title,
+      body: req.body.body,
+      // category: req.body.category
     })
       .then(function(dbReview) {
         res.json(dbReview);
       });
   });
+
 };

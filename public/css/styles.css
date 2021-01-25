@@ -97,6 +97,11 @@ input:focus {
   color: white;
   margin-bottom: 20px;
 }
+.bodyText {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
 
 .top {
   padding-top: 70px;
