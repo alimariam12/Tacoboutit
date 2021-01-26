@@ -1,3 +1,5 @@
+//code currently unused but may be implemented in furture developement!
+
 let $stars;
 
 jQuery(document).ready(function ($) {
