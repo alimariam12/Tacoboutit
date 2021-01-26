@@ -1,8 +1,13 @@
 <li>
     {{this.title}}
     <br>
-    <div class="bodyText">{{this.body}}</div>  
+    <div class="bodyText">
+        {{this.body}}
+        {{#each reviews}}
+        {{> reviews/editBlock}}
+        {{/each}}
+    </div>
     <button class="edit-review" data-id="{{this.id}}"><i class="fa fa-edit"></i></button>
     <button class="delete-review" data-id="{{this.id}}"><i class="fa fa-trash"></i></button>
-    
+
 </li>
