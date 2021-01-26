@@ -14,19 +14,6 @@ module.exports = function (app) {
     }
     res.render("login");
   });
-
-  app.get('/review', (req, res) => {
-    db.Review.findAll((data) => {
-      const hbsObject = {
-        reviews: data
-      };
-      console.log('trying', hbsObject);
-      res.render('review', hbsObject);
-
-    // }).then(function(dbReview){
-    //   res.json(dbReview);
-  });
-});
   
   app.get("/signup", (req, res) => {
     res.render("signup");
