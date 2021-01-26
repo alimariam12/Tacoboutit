@@ -3,14 +3,7 @@ $.ajax("/api/members", {
   // data: newReview
 }).then(
   function(data) {
-    console.log(data);
-    let reviewDisplay = $("<div class='reviewTitle'></div>");
-    // let titleDisplay = $("<p>Gender: " + data.reviews.title + "</p>");
-    // let bodyDisplay = $("<p>Gender: " + data.reviews.body + "</p>");
-
-    $(".reviewCard").append(
-      reviewDisplay
-    );
+    console.log("hehe", data);
     // Reload the page to get the updated list
     // location.reload();
   })
@@ -28,6 +21,6 @@ const bodyInput = $("textarea#messageNine");
       title: titleInput.val(),
       body: bodyInput.val(),
     };
-    console.log(newReview);
+    console.log("haha", newReview);
     });
     
