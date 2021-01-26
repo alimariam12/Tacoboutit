@@ -4,4 +4,7 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
+  $.get('/api/members').then(data => {
+    console.log(data)
+  })
 });
