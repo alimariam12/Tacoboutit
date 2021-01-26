@@ -8,7 +8,7 @@ const bodyInput = $("textarea#messageNine");
 
     let newReview = {
       title: titleInput.val(),
-      body: bodyInput.val()
+      body: bodyInput.val(),
     };
     console.log(newReview);
     // Send the POST request.
@@ -16,10 +16,21 @@ const bodyInput = $("textarea#messageNine");
       type: "POST",
       data: newReview
     }).then(
-      function() {
+      function(data) {
         console.log("created new review bby");
         // Reload the page to get the updated list
         location.reload();
-      }
-    );
-  });
+      })
+
+      // $.ajax("/api/review", {
+      //   type: "POST",
+      //   data: newReview
+      // }).then(
+      //   function() {
+      //     console.log("created new review");
+      //     // Reload the page to get the updated list
+      //     location.reload();
+      //   }
+      // );
+    });
+    
