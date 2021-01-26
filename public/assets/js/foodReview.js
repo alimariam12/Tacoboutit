@@ -29,29 +29,21 @@ $("#create-review").on("click", function (event) {
   });
 });
 $(document).ready(function () {
-  $(".edit-review").on("click", function (event) {
-    console.log("butting clikked!!!!");
-    // let id = $(this).data("id");
-    // // Send the PUT request.
-    // $.ajax("/api/review/" + id, {
-    //   type: "PUT",
-    // });
-
-    // function updatePost(post) {
-    //   $.ajax({
-    //     method: "PUT",
-    //     url: "/api/review",
-    //     data: post,
-    //   }).then(function () {
-    //     window.location.href = "/members";
-    //   });
-    // }
-    // updatePost();
+  $(".edit-review").on("click", function () {
+    let id = $(this).data("id");
+    let reviewUpdate = $(this).data("reviewUpdate");
+    // Send the PUT request.
+    $.ajax("/api/review/" + id, {
+      type: "PUT",
+      data: reviewUpdate,
+    }).then(function(){
+      console.log("hello");
+    });
   });
 
-  $(".delete-review").on("click", function (event) {
+  $(".delete-review").on("click", function () {
     let id = $(this).data("id");
-    console.log("button clicked!!");
+
     //Send the DELETE request.
     $.ajax("/api/review/" + id, {
       type: "DELETE",

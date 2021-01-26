@@ -82,10 +82,12 @@ module.exports = function (app) {
   });
 
   // PUT route for updating posts
-  app.put("/api/review", function (req, res) {
+  app.put("/api/review/:id", function (req, res) {
     db.Review.update(req.body, {
       where: {
         id: req.body.id,
+        // title: req.body.title,
+        // body: req.body.body,
       },
     }).then(function (dbReview) {
       res.json(dbReview);
