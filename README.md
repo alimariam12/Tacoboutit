@@ -51,7 +51,10 @@ Test using Postman to test routes
 ​
 ### Screenshot 
 ​
-![screenshot](https://project2bby.herokuapp.com/)
+<img width="1371" alt="Screen Shot 2021-01-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/71665063/105921055-fbc09900-5ffd-11eb-9a41-c74c7cd382df.png">
+<img width="1376" alt="Screen Shot 2021-01-26 at 4 15 05 PM" src="https://user-images.githubusercontent.com/71665063/105921066-fd8a5c80-5ffd-11eb-8581-c8daba9e41a8.png">
+<img width="1368" alt="Screen Shot 2021-01-26 at 4 15 24 PM" src="https://user-images.githubusercontent.com/71665063/105921072-ff542000-5ffd-11eb-8c7e-02eb3ad825d4.png">
+<img width="1341" alt="Screen Shot 2021-01-26 at 4 17 20 PM" src="https://user-images.githubusercontent.com/71665063/105921075-011de380-5ffe-11eb-9e87-c16a37f1c556.png">
 ​
 ## Tools
 ​
