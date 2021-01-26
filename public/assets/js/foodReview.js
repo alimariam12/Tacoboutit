@@ -5,7 +5,7 @@ $.ajax("/api/members", {
   function(data) {
     console.log(data);
     // Reload the page to get the updated list
-    location.reload();
+    // location.reload();
   })
 
 $("#create-review").on("click", function(event) {
@@ -16,6 +16,8 @@ console.log("clicked bby!!");
 const loginForm = $("#logMeIn");
 const titleInput = $("input#nameNine");
 const bodyInput = $("textarea#messageNine");
+
+
 
     let newReview = {
       title: titleInput.val(),

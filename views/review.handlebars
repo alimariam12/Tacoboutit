@@ -39,15 +39,17 @@
           <form class="form">
             <div class="card-body">
               {{!-- <h3 class="card-title reviewText">Title</h3> --}}
-              <ul class="reviewTitle">
-                {{#each Reviews}}
+              <ul id="dataTitle">
+                <div class="reviewTitle">
+                {{#each foodReview}}
                 <li>{{title}}</li>
                 {{/each}}
+                </div>
               </ul>
 
               {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
               <ul class="bodyText">
-                {{#each Reviews}}
+                {{#each foodReview}}
                 <li>{{body}}</li>
                 {{/each}}
               </ul>
