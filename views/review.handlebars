@@ -40,15 +40,15 @@
             <div class="card-body">
               {{!-- <h3 class="card-title reviewText">Title</h3> --}}
               <ul class="reviewTitle">
-                {{#each title}}
-                <li>{{this}}</li>
+                {{#each reviews}}
+                <li>{{this.title}}</li>
                 {{/each}}
               </ul>
 
               {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
               <ul class="bodyText">
-                {{#each body}}
-                <li>{{this}}</li>
+                {{#each reviews}}
+                <li>{{this.body}}</li>
                 {{/each}}
               </ul>
             </div>

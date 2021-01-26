@@ -15,16 +15,15 @@ module.exports = function (app) {
     res.render("login");
   });
 
-  // app.get("/login", (req, res) => {
-  //   // If the user already has an account send them to the members page
-  //   if (req.user) {
-  //     res.render("/members");
-  //   } else {
-  //     res.redirect("/signup");
-  //   }
-  //   res.render("login");
-  // });
-
+  app.get('/review', (req, res) => {
+    Review.all((data) => {
+      const hbsObject = {
+        foodReview: data
+      };
+      console.log(hbsObject);
+      res.render('review', hbsObject);
+    });
+  });
   app.get("/signup", (req, res) => {
     res.render("signup");
   });
@@ -35,6 +34,7 @@ module.exports = function (app) {
     res.render("review");
   });
 };
+
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page

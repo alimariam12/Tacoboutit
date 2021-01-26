@@ -42,5 +42,6 @@ Object.keys(db).forEach(function (modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.Review.findAll({raw: true})
 
 module.exports = db;

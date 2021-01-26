@@ -20,18 +20,17 @@ const bodyInput = $("textarea#messageNine");
         console.log("created new review bby");
         // Reload the page to get the updated list
         location.reload();
-      }`
-    );
-    // $.ajax("/api/review", {
-    //   type: "GET",
-    //   data: newReview
-    // }).then(
-    //   function() {
-    //     console.log("created new review bby");
-    //     // Reload the page to get the updated list
-    //     location.reload();
-    //   }
-    // );
+      })
 
-
-  });
+      // $.ajax("/api/review", {
+      //   type: "POST",
+      //   data: newReview
+      // }).then(
+      //   function() {
+      //     console.log("created new review");
+      //     // Reload the page to get the updated list
+      //     location.reload();
+      //   }
+      // );
+    });
+    

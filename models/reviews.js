@@ -1,3 +1,5 @@
+const { raw } = require("mysql");
+
 module.exports = function(sequelize, DataTypes) {
   let Review = sequelize.define("Review", {
     // user: {
@@ -9,14 +11,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: {
         len: [1]
-      }
+      },
     },
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]
-      }
+      },
     },
     // category: {
     //   type: DataTypes.STRING,
