@@ -2,16 +2,16 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    console.log("HIT THE LOGIN ENDPOINT, BOSS");
+    // console.log("HIT THE LOGIN ENDPOINT, BOSS");
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
     });
   });
 
@@ -21,13 +21,13 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
     })
       .then((data) => {
         // res.redirect(307, "/api/login");
         res.json(data);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
         res.status(401).json(err);
       });
@@ -49,34 +49,37 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
   });
-  app.get('/api/members', (req, res) => {
-    db.Review.findAll() 
-    .then(function(data){
+  app.get("/api/members", (req, res) => {
+    db.Review.findAll({
+      raw: true,
+      // where: {
+      //   title: req.params.title,
+      //   body: req.params.body,
+      // }
+    }).then(function (data) {
       const hbsObject = {
-        reviews: data
+        reviews: data,
       };
-      console.log('trying', hbsObject);
-      res.json(data);
-
-    // }).then(function(dbReview){
-    //   res.json(dbReview);
+      console.log("trying", hbsObject);
+      // res.json(data);
+      console.log(data);
+      // }).then(function(dbReview){
+      //   res.json(dbReview);
+    });
   });
-    })
-  
-  app.post("/api/review", function(req, res) {
-    console.log('test', req.body);
+
+  app.post("/api/review", function (req, res) {
+    // console.log("test", req.body);
     db.Review.create({
       title: req.body.title,
       body: req.body.body,
       // category: req.body.category
-    })
-      .then(function(dbReview) {
-        res.json(dbReview);
-      });
+    }).then(function (dbReview) {
+      res.json(dbReview);
+    });
   });
-
 };
