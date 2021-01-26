@@ -16,8 +16,7 @@ module.exports = function (app) {
   });
 
   app.get('/review', (req, res) => {
-    db.Review.findAll({raw: true}) 
-    .then (function() {
+    db.Review.findAll((data) => {
       const hbsObject = {
         reviews: data
       };
@@ -26,9 +25,8 @@ module.exports = function (app) {
 
     // }).then(function(dbReview){
     //   res.json(dbReview);
-    });
-
   });
+});
   
   app.get("/signup", (req, res) => {
     res.render("signup");
