@@ -8,7 +8,7 @@ const bodyInput = $("textarea#messageNine");
 
     let newReview = {
       title: titleInput.val(),
-      body: bodyInput.val()
+      body: bodyInput.val(),
     };
     console.log(newReview);
     // Send the POST request.

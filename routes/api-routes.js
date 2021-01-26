@@ -55,7 +55,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/review", function(req, res) {
-    console.log(req.body);
+    console.log('test', req.body);
     db.Review.create({
       title: req.body.title,
       body: req.body.body,

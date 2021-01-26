@@ -16,14 +16,20 @@ module.exports = function (app) {
   });
 
   app.get('/review', (req, res) => {
-    Review.all((data) => {
+    db.Review.findAll({raw: true}) 
+    .then (function() {
       const hbsObject = {
-        foodReview: data
+        reviews: data
       };
-      console.log(hbsObject);
+      console.log('trying', hbsObject);
       res.render('review', hbsObject);
+
+    // }).then(function(dbReview){
+    //   res.json(dbReview);
     });
+
   });
+  
   app.get("/signup", (req, res) => {
     res.render("signup");
   });
