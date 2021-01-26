@@ -1,3 +1,21 @@
+$.ajax("/api/members", {
+  type: "GET",
+  // data: newReview
+}).then(
+  function(data) {
+    console.log(data);
+    let reviewDisplay = $("<div class='reviewTitle'></div>");
+    // let titleDisplay = $("<p>Gender: " + data.reviews.title + "</p>");
+    // let bodyDisplay = $("<p>Gender: " + data.reviews.body + "</p>");
+
+    $(".reviewCard").append(
+      reviewDisplay
+    );
+    // Reload the page to get the updated list
+    // location.reload();
+  })
+
+
 $("#create-review").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
@@ -11,26 +29,5 @@ const bodyInput = $("textarea#messageNine");
       body: bodyInput.val(),
     };
     console.log(newReview);
-    // Send the POST request.
-    $.ajax("/api/review", {
-      type: "POST",
-      data: newReview
-    }).then(
-      function(data) {
-        console.log("created new review bby");
-        // Reload the page to get the updated list
-        location.reload();
-      })
-
-      // $.ajax("/api/review", {
-      //   type: "POST",
-      //   data: newReview
-      // }).then(
-      //   function() {
-      //     console.log("created new review");
-      //     // Reload the page to get the updated list
-      //     location.reload();
-      //   }
-      // );
     });
     

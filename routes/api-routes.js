@@ -53,6 +53,19 @@ module.exports = function(app) {
       });
     }
   });
+  app.get('/api/members', (req, res) => {
+    db.Review.findAll() 
+    .then(function(data){
+      const hbsObject = {
+        reviews: data
+      };
+      console.log('trying', hbsObject);
+      res.json(data);
+
+    // }).then(function(dbReview){
+    //   res.json(dbReview);
+  });
+});
 
   app.post("/api/review", (req, res) => {
     console.log('test', req.body);
@@ -65,5 +78,6 @@ module.exports = function(app) {
         res.json(data);
       });
   });
+
 
 };
