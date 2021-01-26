@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
+
       "password": "weekend",
+=======
+      "password": "!H0bb35!",
+
       "database": "restaurants_db",
       "host": "localhost",
       "port": 3306,

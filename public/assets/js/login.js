@@ -6,12 +6,13 @@ $(document).ready(() => {
 
   console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
   console.log(loginForm);
+  let userData;
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", (event) => {
     event.preventDefault();
     console.log("LOGIN FORM SUBMITTED, BOSS");
-    const userData = {
+    userData = {
       email: emailInput.val(),
       password: passwordInput.val(),
     };
