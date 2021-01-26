@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       },
+      raw:true,
     },
     body: {
       type: DataTypes.TEXT,
@@ -19,6 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       },
+      raw: true
     },
     // category: {
     //   type: DataTypes.STRING,

@@ -15,32 +15,30 @@ module.exports = function (app) {
     res.render("login");
   });
 
-  app.get('/review', (req, res) => {
-    db.Review.findAll({raw: true}) 
-    .then (function() {
+  app.get('/api/review', (req, res) => {
+    db.Review.findAll((data) => {
       const hbsObject = {
         reviews: data
       };
       console.log('trying', hbsObject);
       res.render('review', hbsObject);
-
     // }).then(function(dbReview){
     //   res.json(dbReview);
     });
 
-  });
   
   app.get("/signup", (req, res) => {
     res.render("signup");
   });
   app.get("/review", isAuthenticated, (req, res) => {
     res.render("review");
-  });
+});
   app.get("/members", isAuthenticated, (req, res) => {
     res.render("review");
   });
-};
 
+  });
+}
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page

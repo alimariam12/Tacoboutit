@@ -54,15 +54,15 @@ module.exports = function(app) {
     }
   });
 
-  app.post("/api/review", function(req, res) {
+  app.post("/api/review", (req, res) => {
     console.log('test', req.body);
     db.Review.create({
       title: req.body.title,
       body: req.body.body,
       // category: req.body.category
     })
-      .then(function(dbReview) {
-        res.json(dbReview);
+      .then((data) => {
+        res.json(data);
       });
   });
 
