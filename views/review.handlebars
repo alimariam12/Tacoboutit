@@ -39,14 +39,8 @@
           <form class="form">
             <div class="card-body">
               {{!-- <h3 class="card-title reviewText">Title</h3> --}}
-              <ul class="reviewTitle">
-                {{#each reviews}}
-                {{> reviews/titleBlock}}
-                {{/each}}
-              </ul>
-
+              <ul class="reviewBox">
               {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
-              <ul class="bodyText">
                 {{#each reviews}}
                 {{> reviews/bodyBlock}}
                 {{/each}}

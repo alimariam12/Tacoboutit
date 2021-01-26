@@ -18,6 +18,7 @@ $("#create-review").on("click", function (event) {
     title: titleInput.val(),
     body: bodyInput.val(),
   };
+
   console.log(newReview);
   $.ajax("/api/review", {
     type: "POST",

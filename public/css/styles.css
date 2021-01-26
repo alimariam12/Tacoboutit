@@ -10,7 +10,7 @@ body {
   font-family: 'Bodoni Moda', serif !important;
   /* font-family: "Lato", sans-serif; */
 }
-
+/* Navbar */
 .nav-link {
   align-items: right;
 }
@@ -26,19 +26,24 @@ body {
 .nav-link {
   color: white !important;
 }
-
-.containerIndex {
-  height: 100%;
-  align-content: center;
-  background-color: rgba(0, 0, 0, 0.65) !important;
-  border-radius: 25px;
-  margin-top: 50px !important;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
+/* Navbar End*/
 
+/* Singup.HandleBars */
 #signupCard {
   height: 500px;
 }
 
+/* All the cards on handlebars */
 .card,
 #signupCard {
   height: 400px;
@@ -68,7 +73,9 @@ input:focus {
   outline: 0 0 0 0 !important;
   box-shadow: 0 0 0 0 !important;
 }
+/* All the Cards Handlebars End */
 
+/* login buttons */
 .login_btn {
   color: white !important;
   background-color: #070707 !important;
@@ -79,19 +86,8 @@ input:focus {
   color: black !important;
   background-color: white !important;
 }
+/* login button end */
 
-#indexCard {
-  background-color: rgba(0, 0, 0, 0.65) !important;
-  border-radius: 25px;
-}
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
-}
 
 .reviewText{
   color: white;
@@ -99,13 +95,13 @@ input:focus {
 }
 .bodyText {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 18px;
 }
 
 .top {
   padding-top: 70px;
-  padding-bottom: 90px;
+  /* padding-bottom: 90px; */
 }
 
 .form-bg {
@@ -118,6 +114,7 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.65) !important;
   padding: 20px;
   border-radius: 25px;
+  color: white;
 }
 
 .form-group {
@@ -174,3 +171,10 @@ input:focus {
   font-size: large;
 
 }
+
+.reviewCard {
+  color: white !important;
+}
+li {
+  list-style-type: none;
+  }
