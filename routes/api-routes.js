@@ -7,7 +7,6 @@ module.exports = function (app) {
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    // console.log("HIT THE LOGIN ENDPOINT, BOSS");
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
@@ -24,7 +23,6 @@ module.exports = function (app) {
       password: req.body.password,
     })
       .then((data) => {
-        // res.redirect(307, "/api/login");
         res.json(data);
       })
       .catch((err) => {
@@ -54,21 +52,11 @@ module.exports = function (app) {
     }
   });
   app.get("/api/members", (req, res) => {
-    db.Review.findAll({
-      raw: true,
-      // where: {
-      //   title: req.params.title,
-      //   body: req.params.body,
-      // }
-    }).then(function (data) {
+    db.Review.findAll({ raw: true }).then(function (data) {
       const hbsObject = {
         reviews: data,
       };
-      console.log("trying", hbsObject);
-      // res.json(data);
-      console.log(data);
-      // }).then(function(dbReview){
-      //   res.json(dbReview);
+      console.log(hbsObject);
     });
   });
 
@@ -77,7 +65,28 @@ module.exports = function (app) {
     db.Review.create({
       title: req.body.title,
       body: req.body.body,
-      // category: req.body.category
+    }).then(function (dbReview) {
+      res.json(dbReview);
+    });
+  });
+
+  // DELETE route for deleting posts
+  app.delete("/api/review/:id", function (req, res) {
+    db.Review.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(function (dbReview) {
+      res.json(dbReview);
+    });
+  });
+
+  // PUT route for updating posts
+  app.put("/api/review", function (req, res) {
+    db.Review.update(req.body, {
+      where: {
+        id: req.body.id,
+      },
     }).then(function (dbReview) {
       res.json(dbReview);
     });

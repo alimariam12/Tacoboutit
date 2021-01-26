@@ -10,7 +10,6 @@ $.ajax("/api/members", {
 $("#create-review").on("click", function (event) {
   // Make sure to preventDefault on a submit event.
   event.preventDefault();
-  console.log("clicked bby!!");
   const titleInput = $("input#nameNine");
   const bodyInput = $("textarea#messageNine");
 
@@ -28,35 +27,37 @@ $("#create-review").on("click", function (event) {
     // Reload the page to get the updated list
     location.reload();
   });
-  $(".editReview").on("click", function (event) {
-    let id = $(this).data("id");
-    // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: newMealState,
-    });
+});
+$(document).ready(function () {
+  $(".edit-review").on("click", function (event) {
+    console.log("butting clikked!!!!");
+    // let id = $(this).data("id");
+    // // Send the PUT request.
+    // $.ajax("/api/review/" + id, {
+    //   type: "PUT",
+    // });
 
-    function updatePost(post) {
-      $.ajax({
-        method: "PUT",
-        url: "/api/posts",
-        data: post,
-      }).then(function () {
-        window.location.href = "/blog";
-      });
-    }
-    updatePost();
+    // function updatePost(post) {
+    //   $.ajax({
+    //     method: "PUT",
+    //     url: "/api/review",
+    //     data: post,
+    //   }).then(function () {
+    //     window.location.href = "/members";
+    //   });
+    // }
+    // updatePost();
   });
 
-  $(".deleteReview").on("click", function (event) {
+  $(".delete-review").on("click", function (event) {
     let id = $(this).data("id");
-
-    // Send the DELETE request.
+    console.log("button clicked!!");
+    //Send the DELETE request.
     $.ajax("/api/review/" + id, {
       type: "DELETE",
     }).then(function () {
       console.log("deleted review", id);
-      // Reload the page to get the updated list
+      //Reload the page to get the updated list
       location.reload();
     });
   });
