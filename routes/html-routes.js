@@ -1,5 +1,3 @@
-// Requiring path to so we can use relative routes to our HTML files
-const path = require("path");
 const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
@@ -11,17 +9,18 @@ module.exports = function (app) {
     console.log("ASDF FDSA", req.user, req.User);
     if (req.user) {
       res.redirect("/members");
+    } else {
+      res.render("login");
     }
-    res.render("login");
   });
 
-  app.get("/signup", (req, res) => {
+  app.get("/signup", (_req, res) => {
     res.render("signup");
   });
-  app.get("/review", isAuthenticated, (req, res) => {
+  app.get("/review", isAuthenticated, (_req, res) => {
     res.render("review");
   });
-  app.get("/members", isAuthenticated, (req, res) => {
+  app.get("/members", isAuthenticated, (_req, res) => {
     db.Review.findAll({
       raw: true,
       // where: {

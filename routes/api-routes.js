@@ -51,12 +51,12 @@ module.exports = function (app) {
       });
     }
   });
-  app.get("/api/members", (req, res) => {
+  app.get("/api/members", (_req, res) => {
     db.Review.findAll({ raw: true }).then(function (data) {
       const hbsObject = {
         reviews: data,
       };
-      console.log(hbsObject);
+      res.json(hbsObject);
     });
   });
 
