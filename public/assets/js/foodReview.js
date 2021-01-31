@@ -30,14 +30,33 @@ $("#create-review").on("click", function (event) {
 });
 $(document).ready(function () {
   $(".edit-review").on("click", function () {
-    let id = $(this).data("id");
-    let reviewUpdate = $(this).data("reviewUpdate");
+    let id = $(this).attr("data-id");
+    // let tempText = "review some restaurants";
+    // let reviewUpdate = $(this).attr("reviewUpdate");
+    console.log(id);
     // Send the PUT request.
     $.ajax("/api/review/" + id, {
       type: "PUT",
-      data: reviewUpdate,
-    }).then(function(){
-      console.log("hello");
+      data: { isEditing: true, id: id },
+    }).then(function (data) {
+      console.log(data);
+    });
+  });
+
+  $(".save-review").on("click", function () {
+    let id = $(this).attr("data-id");
+    let newBodyInput = $(".review-text");
+
+    
+    // let tempText = "review some restaurants";
+    // let reviewUpdate = $(this).attr("reviewUpdate");
+    console.log(id);
+    // Send the PUT request.
+    $.ajax("/api/review/" + id, {
+      type: "PUT",
+      data: { isEditing: false, id: id },
+    }).then(function (data) {
+      console.log(data);
     });
   });
 

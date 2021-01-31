@@ -83,14 +83,26 @@ module.exports = function (app) {
 
   // PUT route for updating posts
   app.put("/api/review/:id", function (req, res) {
-    db.Review.update(req.body, {
-      where: {
-        id: req.body.id,
-        // title: req.body.title,
-        // body: req.body.body,
-      },
-    }).then(function (dbReview) {
-      res.json(dbReview);
+    db.Review.update(
+      { body: req.body.edit, isEditing: req.body.isEditing },
+      {
+        where: {
+          id: req.body.id,
+        },
+      }
+    ).then(function () {
+      db.Review.findAll({
+        raw: true,
+        // where: {
+        //   title: req.params.title,
+        //   body: req.params.body,
+        // }
+      }).then(function (data) {
+        const hbsObject = {
+          reviews: data,
+        };
+        res.render("review", hbsObject);
+      });
     });
   });
 };
