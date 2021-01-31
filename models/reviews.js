@@ -2,10 +2,10 @@ const { raw } = require("mysql");
 
 module.exports = function(sequelize, DataTypes) {
   let Review = sequelize.define("Review", {
-    // user: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
-    // },
+    isEditing:{
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
