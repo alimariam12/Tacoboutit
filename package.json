@@ -21,6 +21,7 @@
   "homepage": "https://github.com/jessparnow/Project_2_bby#readme",
   "dependencies": {
     "animate.css": "^4.1.1",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "bcryptjs": "^2.4.3",
     "eslint": "^7.18.0",
@@ -36,6 +37,5 @@
     "path": "^0.12.7",
     "sequelize": "^6.3.5",
     "yelp-fusion": "^3.0.0"
-  },
-  "devDependencies": {}
+  }
 }
