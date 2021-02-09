@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "lunaluna",
+      "password": "weekend",
       "database": "restaurants_db",
       "host": "localhost",
       "port": 3306,
@@ -9,7 +9,7 @@
     },
     "test": {
       "username": "root",
-      "password": "lunaluna",
+      "password": "weekend",
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"

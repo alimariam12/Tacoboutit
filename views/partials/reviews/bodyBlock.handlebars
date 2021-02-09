@@ -2,10 +2,15 @@
     {{this.title}}
     <br>
     <div class="bodyText">
-        {{this.body}}
-        {{#each reviews}}
+        {{!-- {{this.body}} --}}
+
+        {{#if this.isEditing}}
         {{> reviews/editBlock}}
-        {{/each}}
+        {{else}}
+        {{this.body}}
+
+        {{/if}}
+
     </div>
     <button class="edit-review" data-id="{{this.id}}"><i class="fa fa-edit"></i></button>
     <button class="delete-review" data-id="{{this.id}}"><i class="fa fa-trash"></i></button>
