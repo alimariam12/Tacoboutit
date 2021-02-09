@@ -6,8 +6,9 @@
           <div class="reviewCard p-2 mt-2">
             <h3 class="heading text-center">Search a Restaurant</h3>
             <div class="d-flex justify-content-center">
-              <div class="search"> <input type="text" class="search-input" placeholder="Search..." name=""> <a href="#"
-                  class="search-icon"> <i class="fa fa-search"></i> </a> </div>
+              <div class="search"> <input type="text" class="search-input" placeholder="Search..." name="">
+                <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a>
+              </div>
             </div>
 
           </div>
@@ -40,7 +41,7 @@
             <div class="card-body">
               {{!-- <h3 class="card-title reviewText">Title</h3> --}}
               <ul class="reviewBox">
-              {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
+                {{!-- <p class="card-text bodyText">wow would you look at that woo</p> --}}
                 {{#each reviews}}
                 {{> reviews/bodyBlock}}
                 {{/each}}
